@@ -1,17 +1,17 @@
 # Sunucu Bilgileri
 server:
-  ip: "oyna.provanas.com"
+  ip: "bot_sunucu_ip"
   port: 25565  # Varsayılan Minecraft portu
-  version: "1.21.8"
+  version: "bot_oyun_surumu"
 
 # Bot Hesap Bilgileri
 bot:
-  username: "OrnekOyuncu1"
-  password: "OrnekSifre123123"
+  username: "bot_kullanici_adi"
+  password: "bot_kullanici_sifre"
 
 # Oyun Ayarları
 game:
-  mode: "vadi"  # /sv komutunda kullanılacak oyun modu
+  mode: "bot_oyun_modu"  # /sv komutunda kullanılacak oyun modu
   home: "provanas"     # /home komutunda kullanılacak (opsiyonel)
 
 # Zamanlama Ayarları (milisaniye)
