@@ -1,19 +1,20 @@
 # Sunucu Bilgileri
 server:
-  ip: "bot_sunucu_ip"
+  ip: "oyna.provanas.com"
   port: 25565  # Varsayılan Minecraft portu
-  version: "bot_oyun_surumu"
+  version: "1.21.8"
 
 # Bot Hesap Bilgileri
 bot:
-  username: "bot_kullanici_adi"
-  password: "bot_kullanici_sifre"
+  username: "OrnekOyuncu1"
+  password: "OrnekSifre123123"
 
 # Oyun Ayarları
 game:
-  mode: "bot_oyun_modu"  # /sv komutunda kullanılacak oyun modu
+  mode: "vadi"  # /sv komutunda kullanılacak oyun modu
+  home: "provanas"     # /home komutunda kullanılacak (opsiyonel)
 
-# Zamanlama Ayarları (milisaniye ile çalışır)
+# Zamanlama Ayarları (milisaniye)
 timing:
   reconnectDelay: 10000  # Bağlantı kopması durumunda bekleme
 
@@ -21,7 +22,7 @@ timing:
 features:
   autoReconnect: true    # Otomatik yeniden bağlanma
   logChat: false         # Sohbet mesajlarını logla
-  logAllMessages: true   # Sunucudan gelen tüm mesajları logla
+  logAllMessages: true    # Sunucudan gelen tüm mesajları logla
   logWhispers: true      # Fısıltı mesajlarını logla
 
 
@@ -29,18 +30,26 @@ commands:
   login:
     cmd: "/login {password}"
     waitTime: 10000           # 10 saniye bekle
-    retry: 2                  # 2 kez tekrar dene
+    retry: 0                 # 2 kez tekrar dene
     retryInterval: 2000       # 2 saniye aralıkla
     enabled: true
-    isFirstTimeLogin: true    # SADECE İLK GİRİŞTE ÇALIŞIR
-    repeat: false             # Tekrarlanmaz
+    # isFirstTimeLogin: true    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
     
-  # Sunucu komutu - Sadece ilk girişte çalışır
+  # SV komutu - Sadece ilk girişte çalışır
   sv:
     cmd: "/sv {mode}"
-    waitTime: 10000
+    waitTime: 10000           # Login sonrası 10 saniye bekle
     retry: 1
     retryInterval: 3000
     enabled: true
-    isFirstTimeLogin: false
-    repeat: false
+    isFirstTimeLogin: false    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
+    
+  # Spawn komutu - Her 10 dakikada tekrarlanır (AFK için)
+  spawn:
+    cmd: "/spawn"
+    waitTime: 600000          # İlk spawn 10 dakika sonra
+    retry: 0
+    enabled: true
+    isFirstTimeLogin: false   # 🔓 Her bağlantıda çalışır
+    repeatInterval: 600000    # Her 10 dakikada (600000ms = 10 dakika)
+  
