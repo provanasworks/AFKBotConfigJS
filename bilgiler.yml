@@ -33,7 +33,7 @@ commands:
     retry: 0                 # 2 kez tekrar dene
     retryInterval: 2000       # 2 saniye aralıkla
     enabled: true
-    # isFirstTimeLogin: true    # SADECE İLK GİRİŞTE ÇALIŞIR
+    # isFirstTimeLogin: true    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
     
   # SV komutu - Sadece ilk girişte çalışır
   sv:
@@ -42,7 +42,7 @@ commands:
     retry: 1
     retryInterval: 3000
     enabled: true
-    isFirstTimeLogin: false    # SADECE İLK GİRİŞTE ÇALIŞIR
+    isFirstTimeLogin: false    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
     
   # Spawn komutu - Her 10 dakikada tekrarlanır (AFK için)
   spawn:
@@ -50,6 +50,6 @@ commands:
     waitTime: 600000          # İlk spawn 10 dakika sonra
     retry: 0
     enabled: true
-    isFirstTimeLogin: false   # Her bağlantıda çalışır
+    isFirstTimeLogin: false   # 🔓 Her bağlantıda çalışır
     repeatInterval: 600000    # Her 10 dakikada (600000ms = 10 dakika)
   
