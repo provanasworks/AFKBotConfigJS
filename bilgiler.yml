@@ -6,12 +6,11 @@ server:
 
 # Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
 bots:
-  # - username: "ExampleUser"
-  #   password: "ExamplePassword"
-  #   game:
-  #     mode: "vadi"
-  #     home: "provanas" 
-  
+  - username: "ExampleUser"
+    password: "ExamplePassword"
+    game:
+      mode: "vadi"
+      home: "provanas" 
 
 # Zamanlama Ayarları (milisaniye)
 timing:
