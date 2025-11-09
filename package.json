@@ -15,7 +15,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@sentry/node": "^10.22.0",
     "js-yaml": "^4.1.0",
     "mineflayer": "^4.33.0"
   },

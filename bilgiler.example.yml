@@ -1,18 +1,23 @@
-# Sunucu Bilgileri
+# Sunucu Bilgileri (Tüm botlar için ortak)
 server:
   ip: "oyna.provanas.com"
   port: 25565  # Varsayılan Minecraft portu
   version: "1.21.8"
 
-# Bot Hesap Bilgileri
-bot:
-  username: "OrnekOyuncu1"
-  password: "OrnekSifre123123"
-
-# Oyun Ayarları
-game:
-  mode: "vadi"  # /sv komutunda kullanılacak oyun modu
-  home: "provanas"     # /home komutunda kullanılacak (opsiyonel)
+# Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
+bots:
+  - username: "OrnekOyuncu1"
+    password: "OrnekSifre123123"
+    game:
+      mode: "vadi"  # /sv komutunda kullanılacak oyun modu
+      home: "provanas"     # /home komutunda kullanılacak (opsiyonel)
+  
+  # İkinci bot örneği
+  # - username: "OrnekOyuncu2"
+  #   password: "OrnekSifre456456"
+  #   game:
+  #     mode: "vadi"
+  #     home: "provanas"
 
 # Zamanlama Ayarları (milisaniye)
 timing:
@@ -24,6 +29,8 @@ features:
   logChat: false         # Sohbet mesajlarını logla
   logAllMessages: true    # Sunucudan gelen tüm mesajları logla
   logWhispers: true      # Fısıltı mesajlarını logla
+  filterHealthBars: true # Health bar spam'lerini filtrele
+  filterSpam: true       # Tekrarlanan mesaj spam'lerini filtrele
 
 
 commands:
@@ -33,26 +40,15 @@ commands:
     retry: 2                  # 2 kez tekrar dene
     retryInterval: 2000       # 2 saniye aralıkla
     enabled: true
-    isFirstTimeLogin: true    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
-    repeat: false             # Tekrarlanmaz
+    isFirstTimeLogin: true
+    repeat: false
     
   # SV komutu - Sadece ilk girişte çalışır
   sv:
     cmd: "/sv {mode}"
-    waitTime: 10000           # Login sonrası 10 saniye bekle
+    waitTime: 10000
     retry: 1
     retryInterval: 3000
     enabled: true
-    isFirstTimeLogin: false    # 🔒 SADECE İLK GİRİŞTE ÇALIŞIR
+    isFirstTimeLogin: false
     repeat: false
-    
-  # Spawn komutu - Her 10 dakikada tekrarlanır (AFK için)
-  spawn:
-    cmd: "/spawn"
-    waitTime: 600000          # İlk spawn 10 dakika sonra
-    retry: 0
-    enabled: true
-    isFirstTimeLogin: false   # 🔓 Her bağlantıda çalışır
-    repeat: true              # 🔁 Tekrarlanır
-    repeatInterval: 600000    # Her 10 dakikada (600000ms = 10 dakika)
-  
