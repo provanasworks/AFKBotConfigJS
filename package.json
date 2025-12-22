@@ -4,7 +4,7 @@
   "description": "Minecraft AFK Bot | Provanas",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node patch.js && node bot.js"
   },
   "keywords": [
     "minecraft",

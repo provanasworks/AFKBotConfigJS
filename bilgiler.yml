@@ -2,14 +2,33 @@
 server:
   ip: "oyna.provanas.com"
   port: 25565
+  # version: "1.21.8"  # Version kontrolü devre dışı bırakıldı
 
 # Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
 bots:
-  - username: "ExampleUser"
-    password: "ExamplePassword"
+  - username: "KingAhmet32"
+    password: "Antalyaspor07"
     game:
       mode: "vadi"
       home: "provanas" 
+  
+  - username: "KingAhmet31"
+    password: "Antalyaspor07"
+    game:
+      mode: "vadi"
+      home: "provanas"
+
+  # - username: "KingAhmet35"
+  #   password: "Antalyaspor07"
+  #   game:
+  #     mode: "vadi"
+  #     home: "provanas"
+
+  # - username: "KingAhmet41"
+  #   password: "Antalyaspor07"
+  #   game:
+  #     mode: "vadi"
+  #     home: "provanas"
 
 # Zamanlama Ayarları (milisaniye)
 timing:
