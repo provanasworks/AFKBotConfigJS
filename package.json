@@ -4,7 +4,7 @@
   "description": "Minecraft AFK Bot | Provanas",
   "main": "bot.js",
   "scripts": {
-    "start": "node patch.js && node bot.js"
+    "start": "node bot.js"
   },
   "keywords": [
     "minecraft",
@@ -15,9 +15,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@sentry/node": "^10.26.0",
+    "blessed": "^0.1.81",
     "js-yaml": "^4.1.0",
-    "mineflayer": "^4.33.0"
+    "mineflayer": "^4.34.0"
   },
   "engines": {
     "node": ">=14.0.0"

@@ -2,11 +2,12 @@
 server:
   ip: "oyna.provanas.com"
   port: 25565  # Varsayılan Minecraft portu
+  version: "1.21.8"
 
 # Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
 bots:
   - username: "OrnekOyuncu1"
-    password: "OrnekSifre123123"
+    password: "OrnekSifre123123"  # Sifreyi mutlaka tirnak icinde yazin!
     game:
       mode: "vadi"  # /sv komutunda kullanılacak oyun modu
       home: "provanas"     # /home komutunda kullanılacak (opsiyonel)

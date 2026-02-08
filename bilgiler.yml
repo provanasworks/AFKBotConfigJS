@@ -1,31 +1,20 @@
 # Sunucu Bilgileri (Tüm botlar için ortak)
 server:
   ip: "oyna.provanas.com"
-  port: 25565
-  # version: "1.21.8"  # Version kontrolü devre dışı bırakıldı
+  port: 25565  # Varsayılan Minecraft portu
+  version: "1.21.8"
 
 # Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
 bots:
-  - username: "KingAhmet32"
-    password: "Antalyaspor07"
+  - username: "OrnekOyuncu1"
+    password: "OrnekSifre123123"  # Sifreyi mutlaka tirnak icinde yazin!
     game:
-      mode: "vadi"
-      home: "provanas" 
+      mode: "vadi"  # /sv komutunda kullanılacak oyun modu
+      home: "provanas"     # /home komutunda kullanılacak (opsiyonel)
   
-  - username: "KingAhmet31"
-    password: "Antalyaspor07"
-    game:
-      mode: "vadi"
-      home: "provanas"
-
-  # - username: "KingAhmet35"
-  #   password: "Antalyaspor07"
-  #   game:
-  #     mode: "vadi"
-  #     home: "provanas"
-
-  # - username: "KingAhmet41"
-  #   password: "Antalyaspor07"
+  # İkinci bot örneği
+  # - username: "OrnekOyuncu2"
+  #   password: "OrnekSifre456456"
   #   game:
   #     mode: "vadi"
   #     home: "provanas"
@@ -38,7 +27,7 @@ timing:
 features:
   autoReconnect: true    # Otomatik yeniden bağlanma
   logChat: false         # Sohbet mesajlarını logla
-  logAllMessages: true   # Sunucudan gelen tüm mesajları logla
+  logAllMessages: true    # Sunucudan gelen tüm mesajları logla
   logWhispers: true      # Fısıltı mesajlarını logla
   filterHealthBars: true # Health bar spam'lerini filtrele
   filterSpam: true       # Tekrarlanan mesaj spam'lerini filtrele
