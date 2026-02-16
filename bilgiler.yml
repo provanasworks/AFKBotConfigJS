@@ -31,6 +31,13 @@ features:
   logWhispers: true      # Fısıltı mesajlarını logla
   filterHealthBars: true # Health bar spam'lerini filtrele
   filterSpam: true       # Tekrarlanan mesaj spam'lerini filtrele
+  locationCheck:
+    enabled: true
+    command: "/neredeyim"        # Konum kontrol komutu
+    lobbyKeyword: "lobi"         # Lobide olduğunu belirten anahtar kelime
+    responseTimeout: 5000        # Yanıt bekleme süresi (ms)
+    periodicInterval: 300000     # Periyodik kontrol aralığı (5 dk)
+    waitBeforeCheck: 3000        # Spawn sonrası bekleme süresi (ms)
 
 
 commands:
