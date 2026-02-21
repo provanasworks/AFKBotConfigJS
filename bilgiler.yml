@@ -6,8 +6,8 @@ server:
 
 # Bot Hesapları (Birden fazla bot ekleyebilirsiniz)
 bots:
-  - username: "OrnekOyuncu1"
-    password: "OrnekSifre123123"  # Sifreyi mutlaka tirnak icinde yazin!
+  - username: "KingAhmet31"
+    password: "Antalyaspor07"  # Sifreyi mutlaka tirnak icinde yazin!
     game:
       mode: "vadi"  # /sv komutunda kullanılacak oyun modu
       home: "provanas"     # /home komutunda kullanılacak (opsiyonel)

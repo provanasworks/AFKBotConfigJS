@@ -17,7 +17,7 @@
   "dependencies": {
     "blessed": "^0.1.81",
     "js-yaml": "^4.1.0",
-    "mineflayer": "^4.34.0"
+    "mineflayer": "^4.35.0"
   },
   "engines": {
     "node": ">=14.0.0"
